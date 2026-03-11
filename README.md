@@ -1,2 +1,2 @@
 # Data-Structures-Algorithms-and-Leet-Python
-Work on Udemy course Python Data Structures &amp; Algorithms + LEETCODE Exercises
+[Python Data Structures & Algorithms + LEETCODE Exercises](https://www.udemy.com/course/data-structures-algorithms-python/)
