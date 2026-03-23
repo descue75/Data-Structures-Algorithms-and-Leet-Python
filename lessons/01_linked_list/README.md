@@ -105,6 +105,8 @@ Linked lists are a good choice when:
 
 ## Implemented Methods
 
+- [x] get
+- [x] set_value
 - [x] append
 - [x] prepend
 - [x] insert

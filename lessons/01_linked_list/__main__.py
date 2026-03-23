@@ -21,12 +21,12 @@ print(my_linked_list)
 # INSERT OPERATIONS
 # =========================
 
-# Insert at beginning (index 0 → behaves like prepend)
+# Insert at beginning (behaves like prepend)
 my_linked_list.insert(0, 10)
 print(my_linked_list)
 
-# Insert at or beyond end (behaves like append)
-my_linked_list.insert(100, 11)
+# Insert at end (behaves like append)
+my_linked_list.insert(4, 11)
 print(my_linked_list)
 
 # Insert in the middle (requires traversal O(n))

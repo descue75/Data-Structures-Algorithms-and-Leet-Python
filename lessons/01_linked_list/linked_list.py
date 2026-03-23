@@ -7,7 +7,7 @@ class LinkedList:
             self.head = None
             self.tail = None
             self.length = 0
-        else:            
+        else:
             new_node = Node(value)
             self.head = new_node
             self.tail = new_node
@@ -27,7 +27,7 @@ class LinkedList:
         return self.length
 
     def get(self, index):
-        if index >= self.length:
+        if index >= self.length or index < 0:
             return None
         cur = self.head
         for _ in range(index):
@@ -39,7 +39,7 @@ class LinkedList:
         if node:
             node.value = value
             return True
-        return True
+        return False
 
     def append(self, value):
         new_node = Node(value)
@@ -251,22 +251,22 @@ class LinkedList:
             self.head = left.head
             self.tail = right.tail
         return True
-    
+
     def leet_between_reverse(self, start_index, end_index):
         if not (0 <= start_index < end_index < self.length):
-            return False       
-        
+            return False
+
         dummy = Node(-1)
         dummy.next = self.head
         prev = dummy
-  
+
         for _ in range(start_index):
             prev = prev.next
 
         cur = prev.next
 
         for _ in range(end_index - start_index):
-            to_move = cur.next  
+            to_move = cur.next
             cur.next = to_move.next
             to_move.next = prev.next
             prev.next = to_move
@@ -276,7 +276,7 @@ class LinkedList:
 
         self.head = dummy.next
         return True
-    
+
     def leet_swap_pairs(self):
         if self.length < 2:
             return False
@@ -284,7 +284,7 @@ class LinkedList:
         prev = None
 
         while left and left.next:
-            right = left.next  
+            right = left.next
 
             temp = right.next
             right.next = left
@@ -302,4 +302,3 @@ class LinkedList:
             prev = left
             left = temp
         return True
-        
