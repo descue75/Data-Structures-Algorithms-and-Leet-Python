@@ -79,3 +79,67 @@ print(my_linked_list.get(0))
 # Set value at index (O(n))
 my_linked_list.set_value(0, 100)
 print(my_linked_list)
+
+# =========================
+# LEET QUESTION 1 - PALINDROME CHECKER
+# =========================
+palindrome_list = DoublyLinkedList(1)
+palindrome_list.append(2)
+palindrome_list.append(4)
+palindrome_list.append(2)
+palindrome_list.append(1)
+print(palindrome_list)
+print(palindrome_list.leet_is_palindrome())
+
+palindrome_list.remove(2)
+print(palindrome_list)
+print(palindrome_list.leet_is_palindrome())
+
+palindrome_list.set_value(2, 100)
+print(palindrome_list)
+print(palindrome_list.leet_is_palindrome())
+
+# =========================
+# LEET QUESTION 2 - PARTITION LIST
+# =========================
+# Split into < value and >= value (O(n), O(n) space)
+linked_list_partition = DoublyLinkedList(3)
+linked_list_partition.append(8)
+linked_list_partition.append(5)
+linked_list_partition.append(10)
+linked_list_partition.append(2)
+linked_list_partition.append(1)
+
+print(linked_list_partition)
+linked_list_partition.leet_partition_list(5)
+print(linked_list_partition)
+
+# =========================
+# LEET QUESTION 3 - REVERSE SUBLIST
+# =========================
+# Reverse nodes between indices (O(n), O(1))
+linked_list_between_reverse = DoublyLinkedList(1)
+linked_list_between_reverse.append(2)
+linked_list_between_reverse.append(3)
+linked_list_between_reverse.append(4)
+linked_list_between_reverse.append(5)
+
+print(linked_list_between_reverse)
+linked_list_between_reverse.leet_between_reverse(1, 3)
+print(linked_list_between_reverse)
+
+# =========================
+# LEET QUESTION 4 - SWAP PAIRS
+# =========================
+# Swap adjacent nodes (O(n), O(1))
+linked_list_swap = DoublyLinkedList(1)
+linked_list_swap.append(2)
+linked_list_swap.append(3)
+linked_list_swap.append(4)
+linked_list_swap.append(5)
+linked_list_swap.append(6)
+linked_list_swap.append(7)
+
+print(linked_list_swap)
+linked_list_swap.leet_swap_pairs()
+print(linked_list_swap)

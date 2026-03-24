@@ -143,3 +143,107 @@ class DoublyLinkedList:
         self.head = None
         self.tail = None
         self.length = 0
+
+    def leet_is_palindrome(self):
+        if self.length == 0:
+            return True
+        
+        fwd = self.head
+        bwd = self.tail
+
+        for _ in range(self.length // 2):
+            if fwd.value != bwd.value:
+                return False
+            fwd = fwd.next
+            bwd = bwd.prev
+        
+        return True
+    
+    def leet_partition_list(self, value):
+        if self.head is None:
+            return False
+
+        left = DoublyLinkedList()
+        right = DoublyLinkedList()
+        cur = self.head
+        while cur:
+            if cur.value < value:
+                left.append(cur.value)
+            else:
+                right.append(cur.value)
+            cur = cur.next
+
+        if left.head is None:
+            self.head = right.head
+            self.tail = right.tail
+        elif right.head is None:
+            self.head = left.head
+            self.tail = left.tail
+        else:
+            left.tail.next = right.head
+            right.head.prev = left.tail
+            self.head = left.head
+            self.tail = right.tail
+        return True
+
+    def leet_between_reverse(self, start_index, end_index):
+        if not (0 <= start_index < end_index < self.length):
+            return False
+
+        dummy = Node(-1)
+        dummy.next = self.head
+        prev = dummy
+
+        for _ in range(start_index):
+            prev = prev.next
+
+        cur = prev.next
+
+        for _ in range(end_index - start_index):
+            to_move = cur.next
+            
+            cur.next = to_move.next
+            if to_move.next:
+                to_move.next.prev = cur            
+            
+            to_move.next = prev.next
+            to_move.prev = prev
+
+            prev.next.prev = to_move
+            prev.next = to_move
+            
+        self.head = dummy.next
+        self.head.prev = None
+
+        if end_index == self.length - 1:
+            self.tail = cur
+
+        return True
+    
+    def leet_swap_pairs(self):
+        if self.length < 2:
+            return False
+        left = self.head
+        prev = None
+
+        while left and left.next:
+            right = left.next
+
+            temp = right.next
+            right.next = left
+            right.prev = prev
+            left.next = temp
+            left.prev = right
+
+            if left == self.head:
+                self.head = right
+
+            if right == self.tail:
+                self.tail = left
+
+            if prev:
+                prev.next = right
+
+            prev = left
+            left = temp
+        return True

@@ -125,6 +125,10 @@ Doubly linked lists are useful when:
 - [x] pop_first
 - [x] reverse
 - [x] clear
+- [x] palindrome checker
+- [x] partition list
+- [x] reverse sublist
+- [x] swap pairs
 
 ---
 

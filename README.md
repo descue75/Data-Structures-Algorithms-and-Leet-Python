@@ -36,9 +36,10 @@ dsa-python/
 
 # Lessons
 
-| #   | Topic       | Lesson                                 |
-| --- | ----------- | -------------------------------------- |
-| 01  | Linked List | [Open Lesson](lessons/01_linked_list/) |
+| #   | Topic              | Lesson                                        |
+| --- | ------------------ | --------------------------------------------- |
+| 01  | Linked List        | [Open Lesson](lessons/01_linked_list/)        |
+| 02  | Doubly Linked List | [Open Lesson](lessons/02_doubly_linked_list/) |
 
 ---
 
