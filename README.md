@@ -40,6 +40,8 @@ dsa-python/
 | --- | ------------------ | --------------------------------------------- |
 | 01  | Linked List        | [Open Lesson](lessons/01_linked_list/)        |
 | 02  | Doubly Linked List | [Open Lesson](lessons/02_doubly_linked_list/) |
+| 03  | Stack              | [Open Lesson](lessons/03_stack/)              |
+| 03  | Queue              | [Open Lesson](lessons/04_queue/)              |
 
 ---
 
