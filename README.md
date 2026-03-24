@@ -61,7 +61,10 @@ python -m lessons.01_linked_list
 
 ## Data Structures
 
-- Linked Lists
+- Linked List
+- Doubly Linked List
+- Stack
+- Queue
 
 ## Algorithms
 
